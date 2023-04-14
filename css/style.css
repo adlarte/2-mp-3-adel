@@ -1,0 +1,105 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+  background-color: white;
+  height: 100vh;
+  overflow: hidden;
+  cursor: none;
+}
+
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  background-color: black;
+  /* mix-blend-mode: difference; */
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999;  
+}
+
+.circle {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  color: rgb(40, 26, 18);
+  text-decoration: none;
+  list-style: none;
+}
+/*font-family: 'Chivo Mono', monospace;*/
+
+header{
+  height: 100vh;
+  background-image: url(/images/Fond.png);
+  background-position: bottom;
+  background-size: cover;
+  justify-content: center;
+}
+.button{
+  width: 306px;
+  display: block;
+  height: 93px;
+  background-image: url("/images/background-button.png");
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.button:hover{
+  background-image: url("/images/background-button-hover.png");
+}
+.button a{
+  font-size: 21pt;
+  display: block;
+  padding-top: 29px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-top: 50px;
+}
+.container{
+  justify-content: center;
+  padding-top: 7%;
+}
+.logo{
+  display: block;
+  margin: 0 auto;
+}
+
+.palmiers{
+  position:absolute;
+  display: inline;
+}
+.palmier1{
+  left:217px;
+  top: 934px;
+  width: 1500px;
+  z-index: 98;
+}
+
+.palmier2{
+  top:981px;
+  left:-695px;
+  width: 1900px;
+  z-index: 100;
+}
+
+.palmier3{
+  top:-51px;
+  left:-1450px;
+  width: 1500px;
+  z-index: 99;
+}

@@ -1,0 +1,67 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  
+  .cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    mix-blend-mode: difference;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999;  
+  }
+  
+  .circle {
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+      background-color: #fff;
+  }
+  
+  *{
+    padding: 0;
+    margin: 0;
+    color: rgb(40, 26, 18);
+    text-decoration: none;
+    list-style: none;
+  }
+  /*font-family: 'Chivo Mono', monospace;*/
+  
+  header{
+    height: 100vh;
+    background-color: antiquewhite;
+    /* background-image: url(/images/Fond.png);
+    background-position: bottom;
+    background-size: cover; */
+    justify-content: center;
+  }
+  
+  
+  .palmiers{
+    position:absolute;
+    display: inline;
+  }
+  .palmier1{
+    left:217px;
+    top: -66px;
+    width: 1500px;
+    transform: rotate(5deg);
+  }
+  
+  .palmier2{
+    top:481px;
+    left:-695px;
+    width: 1900px;
+    transform: rotate(10deg);
+  
+  }
