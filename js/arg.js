@@ -40,19 +40,50 @@ function animateCircles() {
 
 animateCircles();
 
+gsap.to(".transition",{
+  delay:0.5,
+  opacity: 0,
+  duration: 1.5,
+})
+
 gsap.to(".palmier1", {
-    delay:1,
-    y:1000,
+    delay:0.7,
+    y:1200,
     duration: 1.5,
     rotation: -5,
-    ease: "power1.in",
+    ease: "power2.in",
     })
 
 gsap.to(".palmier2", {
-    delay:1,
+    delay:0.9,
     y:600,
     duration: 1.5,
-    ease: "power3",
+    ease: "power2.in",
     rotation: -10,
     })
+
+gsap.to(".palmier3", {
+    delay:0.8,
+    x:-900,
+    duration: 1.5,
+    ease: "power2.in",
+    rotation: -30,
+  })
+
+
+  gsap.to(".palmier4", {
+    delay:0.6,
+    x:1000,
+    duration: 1.5,
+    ease: "power2.in",
+    rotation: 30,
+    })
+
+    gsap.to(".palmier5", {
+      delay:0.9,
+      y:600,
+      duration: 1.5,
+      ease: "power2.in",
+      rotation: 10,
+      })
     

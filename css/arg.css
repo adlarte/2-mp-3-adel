@@ -5,6 +5,7 @@ body {
     background-color: white;
     height: 100vh;
     overflow: hidden;
+    cursor: none;
   }
   
   
@@ -56,6 +57,7 @@ body {
     top: -66px;
     width: 1500px;
     transform: rotate(5deg);
+    z-index: 98;
   }
   
   .palmier2{
@@ -63,5 +65,42 @@ body {
     left:-695px;
     width: 1900px;
     transform: rotate(10deg);
+    z-index: 100;
   
+  }
+
+  .palmier3{
+    top:-51px;
+    left:-550px;
+    width: 1500px;
+    z-index: 99;
+    transform: rotate(30deg);
+  }
+
+  .transition{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position:absolute;
+    display: inline;
+    z-index: 90;
+    opacity: 1;
+    pointer-events:none;
+  }
+
+  .palmier4{
+    top:-126px;
+    left:900px;
+    width: 1800px;
+    z-index: 98;
+    transform: rotate(-30deg);
+  }
+
+  .palmier5{
+    top:481px;
+    left:695px;
+    width: 1900px;
+    z-index: 101;
+    transform: rotate(10deg);
+    
   }

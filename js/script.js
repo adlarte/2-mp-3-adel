@@ -43,7 +43,16 @@ animateCircles();
 
 
 
+
+
 document.querySelector(".button").addEventListener("click", function() {
+
+  gsap.to(".transition",{
+    opacity: 1,
+    duration: 3,
+  })
+
+
   gsap.to(".palmier1", {
     y:-1000,
     duration: 1.5,
@@ -65,8 +74,32 @@ document.querySelector(".button").addEventListener("click", function() {
       rotation: 30,
       })
 
+    gsap.to(".palmier4", {
+      x:-1000,
+      duration: 1.5,
+      ease: "power3",
+      rotation: -30,
+      })
+
+      gsap.to(".palmier5", {
+        y:-500,
+        duration: 1.5,
+        ease: "power3",
+        rotation: 10,
+        })
+
 
     setTimeout(() => {
       document.location.href="arg.html";
-    }, 2000)
+    }, 3000)
+});
+
+document.querySelector(".button").addEventListener("hover", function() {
+
+  gsap.to(".circle",{
+    size: 2,
+    duration: 0.3,
+    ease: "power3",
+  })
+
 });

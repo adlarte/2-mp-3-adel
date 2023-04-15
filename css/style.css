@@ -87,7 +87,7 @@ header{
   left:217px;
   top: 934px;
   width: 1500px;
-  z-index: 98;
+  z-index: 97;
 }
 
 .palmier2{
@@ -102,4 +102,32 @@ header{
   left:-1450px;
   width: 1500px;
   z-index: 99;
+}
+.palmier4{
+  top:-126px;
+  left:1900px;
+  width: 1800px;
+  z-index: 98;
+  transform: rotate(30deg);
+}
+
+.palmier5{
+  top:981px;
+  left:695px;
+  width: 1900px;
+  z-index: 100;
+}
+
+
+.transition{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position:absolute;
+  display: inline;
+  z-index: 90;
+  opacity: 0;
+  pointer-events:none;
+
+
 }
