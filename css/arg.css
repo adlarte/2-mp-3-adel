@@ -14,7 +14,6 @@ body {
     position: fixed;
     display: block;
     border-radius: 0;
-    mix-blend-mode: difference;
     top: 0;
     left: 0;
     z-index: 9999999999999999;  
@@ -26,7 +25,7 @@ body {
       width: 26px;
       height: 26px;
       border-radius: 20px;
-      background-color: #fff;
+      background-color: #000000;
   }
   
   *{
@@ -40,10 +39,9 @@ body {
   
   header{
     height: 100vh;
-    background-color: antiquewhite;
-    /* background-image: url(/images/Fond.png);
+    background-image: url(/images/Fond2.png);
     background-position: bottom;
-    background-size: cover; */
+    background-size: cover;
     justify-content: center;
   }
   
@@ -77,16 +75,7 @@ body {
     transform: rotate(30deg);
   }
 
-  .transition{
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    position:absolute;
-    display: inline;
-    z-index: 90;
-    opacity: 1;
-    pointer-events:none;
-  }
+  
 
   .palmier4{
     top:-126px;
@@ -104,3 +93,97 @@ body {
     transform: rotate(10deg);
     
   }
+
+  .transition{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position:absolute;
+    display: inline;
+    z-index: 90;
+    opacity: 1;
+    pointer-events:none;
+  }
+
+  .button{
+    width: 306px;
+    display: block;
+    height: 93px;
+    background-image: url("/images/background-button.png");
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    transition: 0.3s;
+  }
+  
+  .button:hover{
+    background-image: url("/images/background-button-hover.png");
+  }
+  .button a{
+    font-size: 21pt;
+    display: block;
+    padding-top: 29px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-top: 400px;
+  }
+  .container{
+    justify-content: center;
+    padding-top: 2%;
+  }
+  .logo{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cadre {
+    position: relative;
+    width: 1200px;
+  }
+  
+  .texte {
+    position: absolute;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 16pt;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajustez cette valeur pour modifier la largeur du texte à l'intérieur du cadre */
+    text-align: left; /* Pour aligner le texte de manière justifiée */
+    color: #000; /* Changer la couleur du texte si nécessaire */
+  }
+
+  .croix{
+    position: absolute;
+    top: 18%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    transition: 0.3s;
+    background-position: center;
+    background-size: cover;
+  }
+  .croix:hover{
+    background-image: url("/images/croix-hover.png");
+
+  }
+  .drx{
+    position: absolute;
+    top: 74%;
+    left: -6%;
+    transform: translate(-50%, -50%);
+    z-index: 40;
+    width: 533px;
+  }
+

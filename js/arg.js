@@ -6,7 +6,7 @@ const cursor = document.querySelector(".cursor");
 circles.forEach(function (circle, index) {
   circle.x = 0;
   circle.y = 0;
-  circle.style.backgroundColor = "white";
+  circle.style.backgroundColor = "black";
 });
 
 window.addEventListener("mousemove", function (e) {
@@ -86,4 +86,87 @@ gsap.to(".palmier3", {
       ease: "power2.in",
       rotation: 10,
       })
+
+
+
+
+
+
+document.querySelector(".croix").addEventListener("click", function() {
+
+  gsap.to(".popup",{
+    y: 1000,
+    duration: 0.2,
+    ease: "power2.in"
+  })
+});
+
+
+document.querySelector(".button").addEventListener("click", function() {
+
+  gsap.to(".transition",{
+    opacity: 1,
+    duration: 3,
+  })
+
+
+  gsap.to(".palmier1", {
+    y:0,
+    duration: 1.5,
+    ease: "power3",
+    rotation: 0,
+    })
     
+    gsap.to(".palmier2", {
+    y:0,
+    duration: 1.5,
+    ease: "power3",
+    rotation: 0,
+    })
+
+    gsap.to(".palmier3", {
+      x:0,
+      duration: 1.5,
+      ease: "power3",
+      rotation: 0,
+      })
+
+    gsap.to(".palmier4", {
+      x:0,
+      duration: 1.5,
+      ease: "power3",
+      rotation: 0,
+      })
+
+      gsap.to(".palmier5", {
+        y:0,
+        duration: 1.5,
+        ease: "power3",
+        rotation: 0,
+        })
+
+
+    setTimeout(() => {
+      document.location.href="map.html";
+    }, 3000)
+});
+
+
+const texteElement = document.getElementById('texte');
+const texteComplet = texteElement.textContent;
+const vitesseFrappe = 15; // Vitesse de l'animation de frappe en millisecondes
+
+texteElement.textContent = ''; // Videz le texte pour commencer l'animation
+
+let indexTexte = 0;
+
+function animationFrappe() {
+  if (indexTexte < texteComplet.length) {
+    texteElement.textContent += texteComplet.charAt(indexTexte);
+    indexTexte++;
+    setTimeout(animationFrappe, vitesseFrappe);
+  }
+}
+
+// Commencez l'animation de frappe
+animationFrappe();
