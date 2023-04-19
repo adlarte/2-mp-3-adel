@@ -177,6 +177,7 @@ gsap.to(".palmier3", {
       document.addEventListener("DOMContentLoaded", function() {
         // Sélectionnez l'élément input, l'élément div et l'élément p par leurs ID ou classes
         const inputElement = document.getElementById("réponse");
+        const messageElement = document.getElementById("message");
         const pointsElement = document.querySelector(".points.point1");
       
         // Ajoutez un écouteur d'événement 'input' pour détecter les changements de l'input
@@ -186,12 +187,38 @@ gsap.to(".palmier3", {
       
           // Vérifiez si la valeur de l'input correspond au texte "test"
           if (inputValue === "Ramses") {
+            // Modifiez le contenu de l'élément message
+            messageElement.textContent = "Parfait ! Maintenant tu peux rentrer quelque chose t'attends";
+            
             // Affichez l'élément div en supprimant la classe "hidden"
             pointsElement.classList.remove("hidden");
-            messageElement.textContent = "Parfait ! Entrez dans le palais le prince vous attends";
           } else {
+            // Effacez le contenu de l'élément message si la réponse est incorrecte
+            messageElement.textContent = "";
+            
             // Masquez l'élément div en ajoutant la classe "hidden"
             pointsElement.classList.add("hidden");
           }
         });
+      });
+
+
+      document.querySelector(".points").addEventListener("click", function() {
+
+        gsap.to(".points",{
+          height: 3000,
+          width: 3000,
+          backgroundColor: 'white',
+          duration: 1,
+        })
+
+        gsap.to(".transition2",{
+          opacity: 1,
+          duration: 3,
+        })
+
+        setTimeout(() => {
+          document.location.href="fin.html";
+        }, 3000)
+
       });

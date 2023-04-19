@@ -88,24 +88,31 @@ gsap.to(".palmier3", {
       })
 
 
-const texteElement = document.getElementById('texte');
-const texteComplet = texteElement.textContent;
-const vitesseFrappe = 15; // Vitesse de l'animation de frappe en millisecondes
-
-texteElement.textContent = ''; // Videz le texte pour commencer l'animation
-
-let indexTexte = 0;
-
-function animationFrappe() {
-  if (indexTexte < texteComplet.length) {
-    texteElement.textContent += texteComplet.charAt(indexTexte);
-    indexTexte++;
-    setTimeout(animationFrappe, vitesseFrappe);
-  }
-}
-
-// Commencez l'animation de frappe
-animationFrappe();
+      const texteElement = document.getElementById('texte');
+      const texteComplet = texteElement.textContent;
+      const vitesseFrappe = 50;
+      
+      texteElement.textContent = '';
+      
+      let indexTexte = 0;
+      let indexLigne = 0;
+      const lignes = texteComplet.split('|');
+      
+      function animationFrappe() {
+        if (indexLigne < lignes.length) {
+          if (indexTexte < lignes[indexLigne].length) {
+            texteElement.innerHTML += lignes[indexLigne].charAt(indexTexte);
+            indexTexte++;
+          } else {
+            texteElement.innerHTML += '<br>';
+            indexLigne++;
+            indexTexte = 0;
+          }
+          setTimeout(animationFrappe, vitesseFrappe);
+        }
+      }
+      
+      animationFrappe();
 
 
 document.querySelector(".croix").addEventListener("click", function() {

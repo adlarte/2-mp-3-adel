@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    opacity: 1;
+    transition: 2s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .text {
+    font-size: 1.5rem;
+    white-space: pre-wrap;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 30pt;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+  body.background-image {
+    background-image: url('/images/fin.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-color 2s;
+  }
