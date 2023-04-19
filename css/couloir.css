@@ -102,3 +102,77 @@ body {
     opacity: 1;
     pointer-events:none;
   }
+
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    z-index: 39;
+    
+  }
+  
+  .cadre {
+    position: relative;
+    width: 1200px;
+  }
+  
+  .texte {
+    position: absolute;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 16pt;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; /* Ajustez cette valeur pour modifier la largeur du texte à l'intérieur du cadre */
+    text-align: left; /* Pour aligner le texte de manière justifiée */
+    color: #000; /* Changer la couleur du texte si nécessaire */
+  }
+
+  .croix{
+    position: absolute;
+    top: 18%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    transition: 0.3s;
+    background-position: center;
+    background-size: cover;
+  }
+  .croix:hover{
+    background-image: url("/images/croix-hover.png");
+
+  }
+  .gardien{
+    position: absolute;
+    top: 74%;
+    left: -6%;
+    transform: translate(-50%, -50%);
+    z-index: 40;
+    width: 609px;
+  }
+
+  .carte{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    background-image: url(/images/carte.png);
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+  }
+
+  .carte:hover{
+    background-image: url(/images/cartehover.png);
+
+
+  }
+
+  

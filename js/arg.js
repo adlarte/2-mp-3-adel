@@ -154,19 +154,26 @@ document.querySelector(".button").addEventListener("click", function() {
 
 const texteElement = document.getElementById('texte');
 const texteComplet = texteElement.textContent;
-const vitesseFrappe = 15; // Vitesse de l'animation de frappe en millisecondes
+const vitesseFrappe = 50;
 
-texteElement.textContent = ''; // Videz le texte pour commencer l'animation
+texteElement.textContent = '';
 
 let indexTexte = 0;
+let indexLigne = 0;
+const lignes = texteComplet.split('|');
 
 function animationFrappe() {
-  if (indexTexte < texteComplet.length) {
-    texteElement.textContent += texteComplet.charAt(indexTexte);
-    indexTexte++;
+  if (indexLigne < lignes.length) {
+    if (indexTexte < lignes[indexLigne].length) {
+      texteElement.innerHTML += lignes[indexLigne].charAt(indexTexte);
+      indexTexte++;
+    } else {
+      texteElement.innerHTML += '<br>';
+      indexLigne++;
+      indexTexte = 0;
+    }
     setTimeout(animationFrappe, vitesseFrappe);
   }
 }
 
-// Commencez l'animation de frappe
 animationFrappe();

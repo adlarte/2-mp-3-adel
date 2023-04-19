@@ -1,0 +1,199 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+  }
+
+  .cursor {
+    pointer-events: none;
+    position: fixed;
+    display: block;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999;  
+  }
+  
+  .circle {
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+      background-color: #000000;
+  }
+  
+  *{
+    padding: 0;
+    margin: 0;
+    color: rgb(40, 26, 18);
+    text-decoration: none;
+    list-style: none;
+  }
+
+/*font-family: 'Chivo Mono', monospace;*/
+  
+  header{
+    height: 100vh;
+    background-image: url(/images/garden.png);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+  }
+  
+  
+  .palmiers{
+    position:absolute;
+    display: inline;
+  }
+
+  .palmier1 {
+    left: 217px;
+    top: -66px;
+    width: 1500px;
+    transform: rotate(0deg);
+    z-index: 98;
+    }
+    
+    .palmier2 {
+    top: 481px;
+    left: -695px;
+    width: 1900px;
+    transform: rotate(0deg);
+    z-index: 100;
+    }
+    
+    .palmier3 {
+    top: -51px;
+    left: -550px;
+    width: 1500px;
+    z-index: 99;
+    transform: rotate(0deg);
+    }
+    
+    .palmier4 {
+    top: -126px;
+    left: 900px;
+    width: 1800px;
+    z-index: 98;
+    transform: rotate(0deg);
+    }
+    
+    .palmier5 {
+    top: 481px;
+    left: 695px;
+    width: 1900px;
+    z-index: 101;
+    transform: rotate(0deg);
+    }
+    
+    
+  
+  .transition{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position:absolute;
+    display: inline;
+    z-index: 90;
+    opacity: 1;
+    pointer-events:none;
+  }
+
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    z-index: 40;
+  }
+  
+  .cadre {
+    position: relative;
+    width: 1200px;
+  }
+  
+  .texte {
+    position: absolute;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 16pt;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajustez cette valeur pour modifier la largeur du texte à l'intérieur du cadre */
+    text-align: center; /* Pour aligner le texte de manière justifiée */
+    color: #000; /* Changer la couleur du texte si nécessaire */
+  }
+
+  .croix{
+    position: absolute;
+    top: 18%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    transition: 0.3s;
+    background-position: center;
+    background-size: cover;
+  }
+  .croix:hover{
+    background-image: url("/images/croix-hover.png");
+
+  }
+
+  .drx{
+    position: absolute;
+    top: 74%;
+    left: -6%;
+    transform: translate(-50%, -50%);
+    z-index: 40;
+    width: 533px;
+  }
+
+  .carte{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    background-image: url(/images/carte.png);
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+  }
+
+  .carte:hover{
+    background-image: url(/images/cartehover.png);
+    height: 205px;
+    width: 205px;
+  }
+
+  .points{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(85, 255, 255, 0.876);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    transition: 0.3s;
+    filter: blur(3px);
+  }
+
+  .points:hover{
+    height: 70px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.895);
+  }
+
+  .point1{
+    top: 50%;
+    left: 50%;
+  }

@@ -86,3 +86,89 @@ gsap.to(".palmier3", {
       ease: "power2.in",
       rotation: 10,
       })
+
+      const texteElement = document.getElementById('texte');
+      const texteComplet = texteElement.textContent;
+      const vitesseFrappe = 50;
+      
+      texteElement.textContent = '';
+      
+      let indexTexte = 0;
+      let indexLigne = 0;
+      const lignes = texteComplet.split('|');
+      
+      function animationFrappe() {
+        if (indexLigne < lignes.length) {
+          if (indexTexte < lignes[indexLigne].length) {
+            texteElement.innerHTML += lignes[indexLigne].charAt(indexTexte);
+            indexTexte++;
+          } else {
+            texteElement.innerHTML += '<br>';
+            indexLigne++;
+            indexTexte = 0;
+          }
+          setTimeout(animationFrappe, vitesseFrappe);
+        }
+      }
+      
+      animationFrappe();
+
+      document.querySelector(".croix").addEventListener("click", function() {
+
+        gsap.to(".parole",{
+          y: 1000,
+          duration: 0.2,
+          ease: "power2.in"
+        })
+      });
+
+
+
+      document.querySelector(".carte").addEventListener("click", function() {
+
+        gsap.to(".transition",{
+          opacity: 1,
+          duration: 3,
+        })
+      
+      
+        gsap.to(".palmier1", {
+          y:0,
+          duration: 1.5,
+          ease: "power3",
+          rotation: 0,
+          })
+          
+          gsap.to(".palmier2", {
+          y:0,
+          duration: 1.5,
+          ease: "power3",
+          rotation: 0,
+          })
+      
+          gsap.to(".palmier3", {
+            x:0,
+            duration: 1.5,
+            ease: "power3",
+            rotation: 0,
+            })
+      
+          gsap.to(".palmier4", {
+            x:0,
+            duration: 1.5,
+            ease: "power3",
+            rotation: 0,
+            })
+      
+            gsap.to(".palmier5", {
+              y:0,
+              duration: 1.5,
+              ease: "power3",
+              rotation: 0,
+              })
+      
+      
+          setTimeout(() => {
+            document.location.href="map2.html";
+          }, 3000)
+      });
