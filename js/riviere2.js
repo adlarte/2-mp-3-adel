@@ -116,7 +116,7 @@ gsap.to(".palmier3", {
       document.querySelector(".points").addEventListener("click", function() {
 
         gsap.to(".popup",{
-          y: -900,
+          y: -1300,
           duration: 0.6,
           ease: "power2.in"
         })
@@ -125,7 +125,7 @@ gsap.to(".palmier3", {
       document.querySelector(".croix").addEventListener("click", function() {
 
         gsap.to(".popup",{
-          y: 900,
+          y: 1300,
           duration: 0.6,
           ease: "power2.in"
         })
@@ -197,7 +197,7 @@ gsap.to(".palmier3", {
           // Vérifiez si la valeur de l'input correspond au texte "test"
           if (inputValue === "Thot") {
             // Modifiez le contenu de l'élément message
-            messageElement.textContent = "Bonne réponse ! Voici un chiffre du code: 9";
+            messageElement.textContent = "Bonne réponse ! Voici un chiffre du code: 79";
           } else {
             // Effacez le contenu de l'élément message si la réponse est incorrecte
             messageElement.textContent = "";
